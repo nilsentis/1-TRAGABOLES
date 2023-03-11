@@ -34,14 +34,14 @@
     /* border: 1px solid black; */
 }
 
-.bola{
+/* .bola{
     width: 10vh;
-    height: 10vh;
-    /* background-color: var(--colorBola); */
-    /* border-radius: 50%; */
-    /* position: absolute; */
-    /*border: 0.2vh solid black;*/
-}
+    height: 10vh; 
+    background-color: var(--colorBola);
+    border-radius: 50%;
+    position: absolute;
+    border: 0.2vh solid black;
+} */
 
 #contador{
     position: fixed;
