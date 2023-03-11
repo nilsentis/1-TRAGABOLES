@@ -12,15 +12,15 @@
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    background-image: url(./img/minecraft_wallpaper.webp);
+    /* background-image: url(./img/minecraft_wallpaper.webp); */
     background-size: cover;
 }
 
 .hippo{
     width: 20vh;
     height: 20vh;
-    /* background-image: url(./img/hippo.png); */
-    background-image: url(./img/pingu.png);
+    background-image: url(./img/hippo.png);
+    /* background-image: url(./img/pingu.png); */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;

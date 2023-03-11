@@ -28,7 +28,7 @@
                 boles[i].style.height = mida + "px";
 
                 boles[i].style.border = "solid black 2px";
-                // boles[i].style.borderRadius = "20%";
+                boles[i].style.borderRadius = "100%";
 
                 color = Math.random() * (4 - 1) + 1;
 
