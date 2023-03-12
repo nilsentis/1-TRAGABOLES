@@ -2,7 +2,7 @@
         const pantalla      = document.querySelector("#pantalla");
         const hippo = document.querySelector(".hippo");
         const contenidor = document.querySelector('.contenidor');
-        const boles    = document.querySelectorAll(".bola");
+        // const boles    = document.querySelectorAll(".bola");
         let cont = 0;
 
         hippo.style.top  = (pantalla.clientHeight / 2 - hippo.clientHeight / 2) + "px";
@@ -23,12 +23,26 @@
                 boles[i].className = 'bola';
                 contenidor.appendChild(boles[i]);
 
-                let mida = Math.round(Math.random()*80 + 30);
+                let width = window.innerWidth; // Obtenir l'amplada de la finestra del navegador
+                let height = window.innerHeight; // Obtenir l'alçada de la finestra del navegador
+                let minDim = Math.min(width, height); // Troba la dimensió mínima entre l'amplada i l'alçada (retorna un valor entre dos que se li passa)
+
+                let mida = Math.round(Math.random() * (minDim * 0.1) + minDim * 0.05); // Escull una mida entre 5% i 15% de la dimensió mínima de la pantalla
                 boles[i].style.width = mida + "px";
                 boles[i].style.height = mida + "px";
 
+                /* Podem usar aquest però només ens servirà per calcular la mida d'aquestes a travès del widht (amplada) de la .pantalla ja que permet 1 dels dos nomès a la vegada
+                let mida = Math.round(Math.random()*5 + 2);
+                boles[i].style.width = mida + "vw";
+                boles[i].style.height = mida + "vw"; */
+
+                /*Podriem utilitzar pixels però desprès no es farien més petites o més grans en relació a la pantalla:
+                let mida = Math.round(Math.random()*80 + 30);
+                boles[i].style.width = mida + "px";
+                boles[i].style.height = mida + "px"; */
+
                 boles[i].style.border = "solid black 2px";
-                boles[i].style.borderRadius = "100%";
+                boles[i].style.borderRadius = "50%";
 
                 color = Math.random() * (4 - 1) + 1;
 
@@ -114,7 +128,7 @@
                 case 'ArrowDown'    :   hippo.style.top   = parseInt(hippo.style.top) + 10 + "px"; break;
                 case 'ArrowUp'      :   hippo.style.top   = parseInt(hippo.style.top) - 10 + "px"; break;
                 case 'ArrowLeft'    :   hippo.style.left  = parseInt(hippo.style.left) - 10 + "px"; break;
-                case 'ArrowRight'   :   hippo.style.left  = parseInt(caixaVermella.style.left) + 10 + "px"; break;
+                case 'ArrowRight'   :   hippo.style.left  = parseInt(hippo.style.left) + 10 + "px"; break;
             }
             controlarLimits();
             detectarXoc();
