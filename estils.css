@@ -53,11 +53,12 @@
     padding: 10px;
 }
 
+#resultat {
+    height: 100vh;
+}
+
 #titol1, #titol2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* height: 100vh;  */
+        text-align: center;
 }
 
 #titol1{

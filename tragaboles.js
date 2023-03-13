@@ -109,12 +109,12 @@
                 if (cont > 0)
                 {
                     h1.innerHTML = "Victory!";
-                    h1.style.color = "green";
+                    // h1.style.color = "green";
                 }
                 else 
                 {
                     h1.innerHTML = "Game Over!";
-                    h1.style.color = "red";
+                    // h1.style.color = "red";
                 }
                 h2.innerHTML = "Puntuació: " + cont;
                 setTimeout(() => {
