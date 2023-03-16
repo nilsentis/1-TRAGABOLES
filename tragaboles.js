@@ -1,9 +1,9 @@
     document.addEventListener('DOMContentLoaded', () => {
-        const pantalla      = document.querySelector("#pantalla");
+        const pantalla      = document.querySelector("#pantalla"); //No es modifiquen les const
         const hippo = document.querySelector(".hippo");
         const contenidor = document.querySelector('.contenidor');
         // const boles    = document.querySelectorAll(".bola");
-        let cont = 0;
+        let cont = 0; //Es modifica el valor amb let
 
         hippo.style.top  = (pantalla.clientHeight / 2 - hippo.clientHeight / 2) + "px";
         hippo.style.left = (pantalla.clientWidth / 2 - hippo.clientWidth / 2) + "px";
@@ -21,7 +21,7 @@
             for(let i=0; i<amountBalls; i++) {
                 boles[i] = document.createElement("div");
                 boles[i].className = 'bola';
-                contenidor.appendChild(boles[i]);
+                contenidor.appendChild(boles[i]);   //inserta l'element boles dins del div contenidor
 
                 let width = window.innerWidth; // Obtenir l'amplada de la finestra del navegador
                 let height = window.innerHeight; // Obtenir l'alçada de la finestra del navegador
@@ -103,7 +103,7 @@
             }
             if (fi == 1)
             {
-                bola.remove();
+                bola.remove();  //removechild buscar
                 hippo.remove();
                 contenidor.remove();
                 if (cont > 0)
